@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-fundamentals"
+version = "1.0.0"
+description = "Beginner-friendly LangChain fundamentals lessons."
+requires-python = ">=3.10"
+readme = "README.md"
+
+# The numbered lesson folders are scripts, not import packages.
+# lesson_setup is the only local package. requirements.txt installs it
+# with pip's editable mode so `import lesson_setup` works from the project root.
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["lesson_setup*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "live: calls the OpenAI API; skipped unless RUN_LIVE_API_TESTS=1",
+]
