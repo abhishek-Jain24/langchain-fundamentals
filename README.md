@@ -1,6 +1,6 @@
 # LangChain Fundamentals
 
-A small, beginner-friendly Python project for a live GenAI class. Each lesson is one script. The scripts introduce chat models, prompts, structured output, output parsers, messages, conversation memory, chains, and runnables. The last two scripts are a tiny learning assistant.
+A small, beginner-friendly Python project for a  GenAI . Each lesson is one script. The scripts introduce chat models, prompts, structured output, output parsers, messages, conversation memory, chains, and runnables. The last two scripts are a tiny learning assistant.
 
 The lessons use current LangChain APIs from `langchain-core` and `langchain-openai`. Conversation history is kept in a normal Python list and passed into a chain with `MessagesPlaceholder`. That list lives only in the running program. It is not stored in a database, and it is gone when the program exits.
 
